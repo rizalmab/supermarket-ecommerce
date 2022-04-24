@@ -1,9 +1,9 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import NavBar from "./components/NavBar";
-import SingleCard from "./components/ItemCards/SingleCard";
+import ItemCards from "./components/ItemCards/ItemCards";
 
-//! Add in filter sidebar, cards for items (with quantity, add to cart button, price)
+//! Add in cards for items (with picture, quantity, add to cart button, price)
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
           </div>
           <div className="buttons">Buttons section</div>
           <div className="item-cards">
-            <SingleCard />
+            <ItemCards />
           </div>
         </div>
       </div>
