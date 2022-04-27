@@ -3,8 +3,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import NavBar from "./components/NavBar";
 import ItemCards from "./components/ItemCards/ItemCards";
 
-//! Add in cards for items (with picture, quantity, add to cart button, price)
-
 function App() {
   return (
     <div className="App">

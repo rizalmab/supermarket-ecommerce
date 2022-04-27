@@ -25,4 +25,12 @@
 
 .item-cards {
   margin: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+.quantity-input {
+  width: 30px;
+  display: inline-block;
+  border: 1px black solid;
 }
