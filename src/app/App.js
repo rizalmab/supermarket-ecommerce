@@ -1,7 +1,7 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import NavBar from "./components/NavBar";
-import ItemCards from "./components/ItemCards/ItemCards";
+import NavBar from "../common/NavBar";
+import ItemCards from "../features/items/CardsContainer";
 
 function App() {
   return (

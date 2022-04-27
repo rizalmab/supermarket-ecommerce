@@ -2,7 +2,7 @@ import React from "react";
 import items from "./ItemsData";
 import SingleCard from "./SingleCard";
 
-const ItemCards = () => {
+const CardsContainer = () => {
   return (
     <>
       {items.map((item, i) => {
@@ -12,4 +12,4 @@ const ItemCards = () => {
   );
 };
 
-export default ItemCards;
+export default CardsContainer;

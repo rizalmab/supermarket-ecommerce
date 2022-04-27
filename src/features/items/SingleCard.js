@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, Card } from "react-bootstrap";
 import { useState } from "react";
-import QuantityBtn from "../misc/QuantityBtn";
+import QuantityBtn from "../../common/QuantityBtn";
 
 const SingleCard = (props) => {
   const [isQtyShown, setIsQtyShown] = useState(false);
@@ -22,10 +22,18 @@ const SingleCard = (props) => {
           <Card.Title>{item.name}</Card.Title>
           <Card.Text>Price: ${price}</Card.Text>
           <Card.Text>{item.description}</Card.Text>
-          <Button variant="primary" onClick={chooseQty}>
-            Add to cart
-          </Button>
-          <QuantityBtn />
+          {isQtyShown ? (
+            <>
+              <QuantityBtn />
+              <Button variant="success">Confirm</Button>
+              <br />
+              <Button variant="danger">Cancel</Button>
+            </>
+          ) : (
+            <Button variant="primary" onClick={chooseQty}>
+              Add to cart
+            </Button>
+          )}
         </Card.Body>
       </Card>
     </>
