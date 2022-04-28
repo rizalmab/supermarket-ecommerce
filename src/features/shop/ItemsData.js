@@ -1,5 +1,6 @@
 const items = [
   {
+    id: 1,
     name: "Carrot",
     description: "It's red and tasteless.",
     price: 100,
@@ -8,6 +9,7 @@ const items = [
       "https://previews.123rf.com/images/huawang/huawang1304/huawang130400080/19317051-a-single-carrot-on-a-white-background.jpg",
   },
   {
+    id: 2,
     name: "Spinach",
     description: "It's green and bitter.",
     price: 150,
@@ -16,6 +18,7 @@ const items = [
       "https://media.nedigital.sg/fairprice/fpol/media/images/product/XL/10355403_XL1_20210603.jpg?w=1200&q=70",
   },
   {
+    id: 3,
     name: "Potato",
     description: "It's brown and hard.",
     price: 50,
