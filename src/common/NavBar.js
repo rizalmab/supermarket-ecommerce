@@ -9,10 +9,10 @@ import {
 } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
+import { Link } from "react-router-dom";
 
 // Redux
 import { selectNoOfItemsInCart } from "../features/shop/shopSlice";
-import { store } from "../app/store";
 import { useSelector } from "react-redux";
 
 // let cartItems = 0;
@@ -26,11 +26,19 @@ const NavBar = () => {
     <Navbar bg="light" expand="lg">
       <Container>
         <FontAwesomeIcon icon={solid("bag-shopping")} />
-        <Navbar.Brand href="#home">Supermarket-Ecommerce</Navbar.Brand>
+        <Link to="/" style={{ textDecoration: "none" }}>
+          <Navbar.Brand href="#home">Supermarket-Ecommerce</Navbar.Brand>
+        </Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="#home">Home</Nav.Link>
+            {/* <Link
+              to="/"
+              style={{ textDecoration: "inherit", color: "inherit" }}
+            >
+              Home
+            </Link> */}
             <Nav.Link href="#link">Link</Nav.Link>
           </Nav>
         </Navbar.Collapse>
@@ -44,8 +52,9 @@ const NavBar = () => {
           <Button variant="outline-success">Search</Button>
         </Form>
         <Nav.Link href="#login">Login</Nav.Link>
-        <FontAwesomeIcon icon={solid("cart-shopping")} />
-        {/* <p>{selectNoOfItemsInCart(store.getState())}</p> */}
+        <Link to="/cart" style={{ color: "black" }}>
+          <FontAwesomeIcon icon={solid("cart-shopping")} />
+        </Link>
         <p>{itemsInCart}</p>
       </Container>
     </Navbar>
