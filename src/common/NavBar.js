@@ -10,14 +10,9 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 import { Link } from "react-router-dom";
-
 // Redux
 import { selectNoOfItemsInCart } from "../features/shop/shopSlice";
 import { useSelector } from "react-redux";
-
-// let cartItems = 0;
-// console.log("store/shop", store.getState().shop);
-// console.log(selectNoOfItemsInCart(store.getState()));
 
 const NavBar = () => {
   const itemsInCart = useSelector(selectNoOfItemsInCart);
@@ -27,7 +22,7 @@ const NavBar = () => {
       <Container>
         <FontAwesomeIcon icon={solid("bag-shopping")} />
         <Link to="/" style={{ textDecoration: "none" }}>
-          <Navbar.Brand href="#home">Supermarket-Ecommerce</Navbar.Brand>
+          <Navbar.Brand>Supermarket-Ecommerce</Navbar.Brand>
         </Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">

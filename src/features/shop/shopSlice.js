@@ -30,3 +30,7 @@ export default shopSlice.reducer;
 export const selectNoOfItemsInCart = (state) => {
   return state.shop.length;
 };
+
+export const selectCartItems = (state) => {
+  return state.shop;
+};

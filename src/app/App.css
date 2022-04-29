@@ -34,3 +34,9 @@
   display: inline-block;
   border: 1px black solid;
 }
+
+.single-cart-item-container {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px 0;
+}
