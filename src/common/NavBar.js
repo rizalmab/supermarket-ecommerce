@@ -10,9 +10,18 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 
-let cartItems = 0;
+// Redux
+import { selectNoOfItemsInCart } from "../features/shop/shopSlice";
+import { store } from "../app/store";
+import { useSelector } from "react-redux";
+
+// let cartItems = 0;
+// console.log("store/shop", store.getState().shop);
+// console.log(selectNoOfItemsInCart(store.getState()));
 
 const NavBar = () => {
+  const itemsInCart = useSelector(selectNoOfItemsInCart);
+
   return (
     <Navbar bg="light" expand="lg">
       <Container>
@@ -36,7 +45,8 @@ const NavBar = () => {
         </Form>
         <Nav.Link href="#login">Login</Nav.Link>
         <FontAwesomeIcon icon={solid("cart-shopping")} />
-        <p>{cartItems}</p>
+        {/* <p>{selectNoOfItemsInCart(store.getState())}</p> */}
+        <p>{itemsInCart}</p>
       </Container>
     </Navbar>
   );

@@ -7,14 +7,16 @@ export const shopSlice = createSlice({
   initialState,
   reducers: {
     addToCart: (state, action) => {
+      // console.log("action.payload", action.payload);
       const searchedItem = state.filter(
-        (item) => item.id === action.payload.id
+        (item) => item.item.id === action.payload.item.id
       );
+      console.log("searchedItem", searchedItem);
       if (searchedItem.length === 0) {
         state.push(action.payload);
       } else {
         const index = state.indexOf(...searchedItem);
-        state[index].quantity += action.payload.quantity;
+        state[index].cartQuantity += action.payload.cartQuantity;
       }
     },
     removeFromCart: () => {},
@@ -24,3 +26,7 @@ export const shopSlice = createSlice({
 export const { addToCart } = shopSlice.actions;
 
 export default shopSlice.reducer;
+
+export const selectNoOfItemsInCart = (state) => {
+  return state.shop.length;
+};

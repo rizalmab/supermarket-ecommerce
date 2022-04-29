@@ -3,6 +3,6 @@ import shopReducer from "../features/shop/shopSlice";
 
 export const store = configureStore({
   reducer: {
-    cart: shopReducer,
+    shop: shopReducer,
   },
 });

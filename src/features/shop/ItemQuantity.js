@@ -6,16 +6,19 @@ import { addToCart } from "./shopSlice";
 import { useState } from "react";
 
 const ItemQuantity = (props) => {
+  const item = props.item;
   const [quantity, setQuantity] = useState(0);
   const dispatch = useDispatch();
-  const item = props.item;
 
   return (
     <div>
       <QuantityBtn setQuantity={setQuantity} />
       <Button
         variant="success"
-        onClick={() => dispatch(addToCart({ item, quantity: quantity }))}
+        onClick={() => {
+          dispatch(addToCart({ item, cartQuantity: quantity }));
+          alert("Item added to cart");
+        }}
       >
         Confirm
       </Button>
