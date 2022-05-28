@@ -17,7 +17,7 @@ const SingleCard = (props) => {
   return (
     <>
       <Card style={{ width: "18rem", margin: "5px" }}>
-        <Card.Img variant="top" src={item.image} />
+        <Card.Img variant="top" src={item.image} className="card-img" />
         <Card.Body>
           <Card.Title>{item.name}</Card.Title>
           <Card.Text>Price: ${price}</Card.Text>

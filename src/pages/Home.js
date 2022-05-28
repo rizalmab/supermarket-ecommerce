@@ -1,5 +1,5 @@
 import React from "react";
-import ItemCards from "../features/shop/CardsContainer";
+import CardsContainer from "../features/shop/CardsContainer";
 
 const Home = () => {
   return (
@@ -12,7 +12,7 @@ const Home = () => {
           </div>
           <div className="buttons">Buttons section</div>
           <div className="item-cards">
-            <ItemCards />
+            <CardsContainer />
           </div>
         </div>
       </div>

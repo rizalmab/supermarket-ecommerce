@@ -9,17 +9,7 @@ const Cart = () => {
 
   return (
     <div>
-      <h1>Cart page</h1>
-      {/* <div className="cart-container">
-        <div className="single-cart-item-container">
-          <div>Image</div>
-          <div>ItemName</div>
-          <div>Quantity</div>
-          <div>Price</div>
-        </div>
-        <div>Item 2</div>
-        <div>Item 3</div>
-      </div> */}
+      <h1>My Cart</h1>
       <Table striped bordered hover>
         <thead>
           <tr>

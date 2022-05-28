@@ -27,6 +27,7 @@
   margin: 20px;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .quantity-input {
@@ -39,4 +40,9 @@
   display: flex;
   justify-content: space-evenly;
   padding: 10px 0;
+}
+
+.card-img {
+  max-height: 300px;
+  max-width: 300px;
 }
